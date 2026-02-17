@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#f7f7f5"/>
+
+  <!-- Onboarding steps - horizontal flow with connecting lines -->
+
+  <!-- Step 1 -->
+  <circle cx="200" cy="300" r="40" fill="none" stroke="#c4c1bd" stroke-width="2"/>
+  <text x="200" y="306" font-family="system-ui, sans-serif" font-size="18" fill="#a8a29e" text-anchor="middle">1</text>
+  <rect x="160" y="360" width="80" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="165" y="374" width="70" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Connector 1-2 -->
+  <line x1="244" y1="300" x2="356" y2="300" stroke="#e7e5e4" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Step 2 -->
+  <circle cx="400" cy="300" r="40" fill="none" stroke="#c4c1bd" stroke-width="2"/>
+  <text x="400" y="306" font-family="system-ui, sans-serif" font-size="18" fill="#a8a29e" text-anchor="middle">2</text>
+  <rect x="360" y="360" width="80" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="365" y="374" width="70" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Connector 2-3 -->
+  <line x1="444" y1="300" x2="556" y2="300" stroke="#e7e5e4" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Step 3 -->
+  <circle cx="600" cy="300" r="40" fill="none" stroke="#c4c1bd" stroke-width="2"/>
+  <text x="600" y="306" font-family="system-ui, sans-serif" font-size="18" fill="#a8a29e" text-anchor="middle">3</text>
+  <rect x="560" y="360" width="80" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="565" y="374" width="70" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Connector 3-4 -->
+  <line x1="644" y1="300" x2="756" y2="300" stroke="#e7e5e4" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Step 4 (completion) -->
+  <circle cx="800" cy="300" r="40" fill="#edebe9" stroke="#c4c1bd" stroke-width="2"/>
+  <!-- Checkmark -->
+  <polyline points="782,300 794,314 820,286" fill="none" stroke="#a8a29e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="760" y="360" width="80" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="765" y="374" width="70" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Progress bar beneath steps -->
+  <rect x="200" y="420" width="600" height="4" rx="2" fill="#e7e5e4"/>
+  <rect x="200" y="420" width="450" height="4" rx="2" fill="#d6d3d1"/>
+
+  <!-- Floating UI cards suggesting onboarding screens -->
+
+  <!-- Card: Welcome -->
+  <rect x="140" y="480" width="220" height="140" rx="10" fill="none" stroke="#e7e5e4" stroke-width="1.5"/>
+  <rect x="160" y="500" width="100" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="160" y="514" width="160" height="4" rx="2" fill="#e7e5e4"/>
+  <rect x="160" y="526" width="140" height="4" rx="2" fill="#e7e5e4"/>
+  <rect x="160" y="570" width="80" height="28" rx="6" fill="#edebe9"/>
+  <rect x="176" y="580" width="48" height="4" rx="2" fill="#c4c1bd"/>
+
+  <!-- Card: Role selection -->
+  <rect x="400" y="480" width="220" height="140" rx="10" fill="none" stroke="#e7e5e4" stroke-width="1.5"/>
+  <rect x="420" y="500" width="80" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="420" y="524" width="180" height="24" rx="6" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="436" y="532" width="60" height="4" rx="2" fill="#d6d3d1"/>
+  <rect x="420" y="558" width="180" height="24" rx="6" fill="#edebe9" stroke="#d6d3d1" stroke-width="1"/>
+  <rect x="436" y="566" width="70" height="4" rx="2" fill="#c4c1bd"/>
+  <rect x="420" y="592" width="180" height="24" rx="6" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="436" y="600" width="50" height="4" rx="2" fill="#d6d3d1"/>
+
+  <!-- Card: Configuration -->
+  <rect x="660" y="480" width="220" height="140" rx="10" fill="none" stroke="#e7e5e4" stroke-width="1.5"/>
+  <rect x="680" y="500" width="90" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="680" y="522" width="16" height="16" rx="3" fill="#edebe9" stroke="#d6d3d1" stroke-width="1"/>
+  <rect x="706" y="526" width="80" height="4" rx="2" fill="#d6d3d1"/>
+  <rect x="680" y="548" width="16" height="16" rx="3" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="706" y="552" width="100" height="4" rx="2" fill="#e7e5e4"/>
+  <rect x="680" y="574" width="16" height="16" rx="3" fill="#edebe9" stroke="#d6d3d1" stroke-width="1"/>
+  <rect x="706" y="578" width="70" height="4" rx="2" fill="#d6d3d1"/>
+
+  <!-- Decorative: subtle corner arcs -->
+  <path d="M 50 50 Q 50 20 80 20" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <path d="M 1150 50 Q 1150 20 1120 20" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <path d="M 50 700 Q 50 730 80 730" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <path d="M 1150 700 Q 1150 730 1120 730" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+</svg>

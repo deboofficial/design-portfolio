@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <!-- Background -->
+  <rect width="1200" height="750" fill="#f7f7f5"/>
+
+  <!-- Phone outline - centered -->
+  <rect x="460" y="80" width="280" height="590" rx="32" fill="none" stroke="#d6d3d1" stroke-width="2"/>
+
+  <!-- Screen area -->
+  <rect x="476" y="120" width="248" height="510" rx="4" fill="#fafaf9"/>
+
+  <!-- Status bar notch hint -->
+  <rect x="560" y="90" width="80" height="6" rx="3" fill="#e7e5e4"/>
+
+  <!-- App header area -->
+  <rect x="500" y="150" width="100" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="500" y="164" width="60" height="4" rx="2" fill="#e7e5e4"/>
+
+  <!-- Circular progress ring - main metric -->
+  <circle cx="600" cy="260" r="55" fill="none" stroke="#e7e5e4" stroke-width="6"/>
+  <path d="M 600 205 A 55 55 0 1 1 548.4 280" fill="none" stroke="#c4c1bd" stroke-width="6" stroke-linecap="round"/>
+  <rect x="580" y="252" width="40" height="5" rx="2.5" fill="#d6d3d1"/>
+  <rect x="585" y="264" width="30" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Daily streak dots -->
+  <circle cx="510" cy="360" r="10" fill="#e7e5e4"/>
+  <circle cx="540" cy="360" r="10" fill="#e7e5e4"/>
+  <circle cx="570" cy="360" r="10" fill="#d6d3d1"/>
+  <circle cx="600" cy="360" r="10" fill="#d6d3d1"/>
+  <circle cx="630" cy="360" r="10" fill="#d6d3d1"/>
+  <circle cx="660" cy="360" r="10" fill="#e7e5e4"/>
+  <circle cx="690" cy="360" r="10" fill="#e7e5e4"/>
+
+  <!-- List items below -->
+  <rect x="500" y="400" width="200" height="40" rx="8" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="516" y="414" width="80" height="4" rx="2" fill="#d6d3d1"/>
+  <rect x="516" y="424" width="50" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <rect x="500" y="452" width="200" height="40" rx="8" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="516" y="466" width="90" height="4" rx="2" fill="#d6d3d1"/>
+  <rect x="516" y="476" width="60" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <rect x="500" y="504" width="200" height="40" rx="8" fill="none" stroke="#e7e5e4" stroke-width="1"/>
+  <rect x="516" y="518" width="70" height="4" rx="2" fill="#d6d3d1"/>
+  <rect x="516" y="528" width="45" height="3" rx="1.5" fill="#e7e5e4"/>
+
+  <!-- Bottom tab bar hint -->
+  <line x1="476" y1="590" x2="724" y2="590" stroke="#e7e5e4" stroke-width="1"/>
+  <circle cx="520" cy="608" r="6" fill="#e7e5e4"/>
+  <circle cx="570" cy="608" r="6" fill="#d6d3d1"/>
+  <circle cx="620" cy="608" r="6" fill="#e7e5e4"/>
+  <circle cx="670" cy="608" r="6" fill="#e7e5e4"/>
+
+  <!-- Home indicator -->
+  <rect x="560" y="640" width="80" height="4" rx="2" fill="#e7e5e4"/>
+</svg>
