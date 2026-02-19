@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import { Nav } from "@/components/nav";
-import { Footer } from "@/components/footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -56,11 +54,9 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <Nav />
-        <main id="main-content" className="flex-1 pt-12" role="main">
+        <main id="main-content" className="flex-1" role="main">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
