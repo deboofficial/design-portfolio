@@ -50,7 +50,7 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-white dark:bg-[#0a0a0a]"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-[#fafafa] dark:bg-[#0a0a0a]"
         >
           {/* Light mode video */}
           <video
@@ -59,8 +59,8 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
             autoPlay
             muted
             playsInline
-            className="max-w-[280px] w-full h-auto block dark:hidden border-0 outline-0"
-            style={{ background: "transparent" }}
+            className="max-w-[160px] w-full h-auto block dark:hidden"
+            style={{ border: "none", outline: "none", boxShadow: "none", clipPath: "inset(2px)" }}
           />
           {/* Dark mode video */}
           <video
@@ -69,8 +69,8 @@ export function Preloader({ onComplete }: { onComplete: () => void }) {
             autoPlay
             muted
             playsInline
-            className="max-w-[280px] w-full h-auto hidden dark:block border-0 outline-0"
-            style={{ background: "transparent" }}
+            className="max-w-[160px] w-full h-auto hidden dark:block"
+            style={{ border: "none", outline: "none", boxShadow: "none", clipPath: "inset(2px)" }}
           />
         </motion.div>
       )}

@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 import { renderMDX } from "@/lib/mdx";
 import { PageTransition } from "@/components/page-transition";
-import { AnimatedLink } from "@/components/animated-link";
+import { FloatingButtons } from "@/components/floating-buttons";
+import { TableOfContents } from "@/components/table-of-contents";
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -42,74 +43,75 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const content = await renderMDX(project.content);
 
-  const allProjects = getAllProjects();
-  const currentIndex = allProjects.findIndex((p) => p.slug === slug);
-  const nextProject = allProjects[currentIndex + 1] ?? allProjects[0];
+  // Extract headings from raw markdown for sidebar
+  const headingRegex = /^#{1,6}\s+(.+)$/gm;
+  const headings: { text: string; id: string }[] = [];
+  let match;
+  while ((match = headingRegex.exec(project.content)) !== null) {
+    const text = match[1];
+    const id = text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .trim();
+    headings.push({ text, id });
+  }
 
   return (
     <PageTransition>
-      <article className="max-w-[1200px] mx-auto px-6 pt-24 pb-16">
-        {/* Header */}
-        <header className="max-w-[680px] mb-12">
-          <AnimatedLink
-            href="/"
-            className="text-[13px] text-muted mb-8 inline-block"
-          >
-            &larr; All projects
-          </AnimatedLink>
-          <h1 className="text-[clamp(1.75rem,4vw,2.5rem)] font-medium tracking-tight leading-[1.15] mb-4">
-            {project.title}
-          </h1>
-          <p className="text-[15px] text-muted leading-relaxed mb-8">
-            {project.description}
-          </p>
+      <div className="min-h-screen bg-[#ffffff] dark:bg-[#0a0a0a]">
+      <article className="w-[600px] max-w-full mx-auto px-6 pt-24 pb-32">
+        {/* Title — h6 */}
+        <h1 className="text-[14px] leading-[20px] font-[560] tracking-[-0.05px] text-[#090909] dark:text-[#e5e5e5] mb-1">
+          {project.title}
+        </h1>
 
-          {/* Project meta */}
-          <dl className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-6 border-y border-border">
-            <div>
-              <dt className="text-[11px] uppercase tracking-wider text-muted mb-1">
-                Role
-              </dt>
-              <dd className="text-[14px]">{project.role}</dd>
-            </div>
-            <div>
-              <dt className="text-[11px] uppercase tracking-wider text-muted mb-1">
-                Year
-              </dt>
-              <dd className="text-[14px]">{project.year}</dd>
-            </div>
-            {project.tags.length > 0 && (
-              <div className="col-span-2">
-                <dt className="text-[11px] uppercase tracking-wider text-muted mb-1">
-                  Focus
-                </dt>
-                <dd className="text-[14px]">{project.tags.join(", ")}</dd>
-              </div>
-            )}
-          </dl>
-        </header>
+        {/* Date — Body default, muted */}
+        <p className="text-[14px] leading-[20px] font-[460] tracking-[-0.05px] text-[#989897] dark:text-[#999] mb-8">
+          {project.date}
+        </p>
 
-        {/* Content */}
-        <div className="prose max-w-[680px]">{content}</div>
+        {/* Overview — body default */}
+        <p className="text-[14px] leading-[20px] font-[460] tracking-[-0.05px] text-[#111111] dark:text-[#e5e5e5] mb-6">
+          {project.overview}
+        </p>
 
-        {/* Next project */}
-        {nextProject && nextProject.slug !== slug && (
-          <nav
-            className="max-w-[680px] border-t border-border mt-24 pt-8"
-            aria-label="Next project"
-          >
-            <span className="text-[11px] uppercase tracking-wider text-muted block mb-2">
-              Next project
-            </span>
-            <AnimatedLink
-              href={`/work/${nextProject.slug}`}
-              className="text-[1.25rem] font-medium tracking-tight text-foreground"
-            >
-              {nextProject.title}
-            </AnimatedLink>
-          </nav>
+        {/* Placeholder after overview */}
+        <div
+          className="w-full rounded-sm bg-[#fafafa] dark:bg-[#141414] mb-10"
+          style={{ aspectRatio: "16/9" }}
+        />
+
+        {/* Hero image/video slot */}
+        {project.thumbnail && (
+          <div className="relative overflow-hidden rounded-sm mb-10">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-auto"
+            />
+          </div>
         )}
+
+        {/* Summary — body default */}
+        <p className="text-[14px] leading-[20px] font-[460] tracking-[-0.05px] text-[#111111] dark:text-[#e5e5e5] mb-12">
+          {project.summary}
+        </p>
+
+        {/* MDX content */}
+        <div className="prose">{content}</div>
+
+        <p className="text-[12px] leading-[17px] font-[460] tracking-[-0.05px] text-[#989897] dark:text-[#999] mt-24">
+          All content, designs, and case studies on this website are my
+          intellectual property. Unauthorised use, reproduction, or distribution
+          of any material is strictly prohibited.
+        </p>
       </article>
+
+      <TableOfContents headings={headings} />
+      <FloatingButtons showBack showSocials={false} />
+      </div>
     </PageTransition>
   );
 }

@@ -8,6 +8,9 @@ export interface Project {
   description: string;
   role: string;
   year: string;
+  date: string;
+  overview: string;
+  summary: string;
   thumbnail: string;
   tags: string[];
   order: number;
@@ -36,6 +39,9 @@ export function getAllProjects(): Project[] {
         description: data.description ?? "",
         role: data.role ?? "",
         year: data.year ?? "",
+        date: data.date ?? "",
+        overview: data.overview ?? "",
+        summary: data.summary ?? "",
         thumbnail: data.thumbnail ?? "",
         tags: data.tags ?? [],
         order: data.order ?? 0,
@@ -58,6 +64,9 @@ export function getProjectBySlug(slug: string): ProjectWithContent | null {
       description: data.description ?? "",
       role: data.role ?? "",
       year: data.year ?? "",
+      date: data.date ?? "",
+      overview: data.overview ?? "",
+      summary: data.summary ?? "",
       thumbnail: data.thumbnail ?? "",
       tags: data.tags ?? [],
       order: data.order ?? 0,

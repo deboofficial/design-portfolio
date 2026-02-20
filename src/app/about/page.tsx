@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <PageTransition>
-      <section className="max-w-[680px] mx-auto px-6 pt-24 pb-16">
-        <h1 className="text-[clamp(1.75rem,4vw,2.5rem)] font-medium tracking-tight leading-[1.15] mb-8">
+      <section className="w-[600px] max-w-full mx-auto px-6 pt-24 pb-16">
+        <h1 className="text-[48px] leading-[54px] font-[560] tracking-[-0.05px] text-[#090909] dark:text-[#e5e5e5] mb-8">
           About
         </h1>
 
-        <div className="space-y-5 text-[15px] leading-[1.7] text-foreground mb-12">
+        <div className="space-y-5 text-[16px] leading-[22px] font-[460] tracking-[-0.05px] text-[#1D1D21] dark:text-[#e5e5e5] mb-12">
           <p>
             I&apos;m a product designer who believes the best design disappears.
             When everything works as it should, people don&apos;t notice the
@@ -37,7 +37,7 @@ export default function AboutPage() {
         </div>
 
         <div className="border-t border-border pt-8 mb-12">
-          <h2 className="text-[13px] uppercase tracking-wider text-muted mb-4">
+          <h2 className="text-[11px] leading-[15px] font-[460] uppercase tracking-[-0.05px] text-[#747474] dark:text-[#999] mb-4">
             Experience
           </h2>
           <ul className="space-y-4">
@@ -60,13 +60,13 @@ export default function AboutPage() {
             ].map((job) => (
               <li
                 key={job.company}
-                className="flex items-baseline justify-between text-[14px]"
+                className="flex items-baseline justify-between text-[14px] leading-[20px] font-[460]"
               >
                 <div>
-                  <span className="text-foreground">{job.role}</span>
-                  <span className="text-muted">{" — "}{job.company}</span>
+                  <span className="text-[#1D1D21] dark:text-[#e5e5e5]">{job.role}</span>
+                  <span className="text-[#747474] dark:text-[#999]">{" — "}{job.company}</span>
                 </div>
-                <span className="text-[12px] text-muted tabular-nums">
+                <span className="text-[12px] leading-[17px] text-[#747474] dark:text-[#999] tabular-nums">
                   {job.period}
                 </span>
               </li>
@@ -75,21 +75,21 @@ export default function AboutPage() {
         </div>
 
         <div className="border-t border-border pt-8">
-          <h2 className="text-[13px] uppercase tracking-wider text-muted mb-4">
+          <h2 className="text-[11px] leading-[15px] font-[460] uppercase tracking-[-0.05px] text-[#747474] dark:text-[#999] mb-4">
             Get in touch
           </h2>
-          <p className="text-[15px] leading-[1.7] text-foreground">
+          <p className="text-[16px] leading-[22px] font-[460] text-[#1D1D21] dark:text-[#e5e5e5]">
             I&apos;m currently open to new opportunities.{" "}
             <AnimatedLink
-              href="mailto:hello@example.com"
-              className="text-foreground"
+              href="mailto:ali.adebolaa@gmail.com"
+              className="text-[#1D1D21] dark:text-[#e5e5e5]"
             >
               Send me an email
             </AnimatedLink>{" "}
             or find me on{" "}
             <AnimatedLink
               href="https://linkedin.com"
-              className="text-foreground"
+              className="text-[#1D1D21] dark:text-[#e5e5e5]"
               target="_blank"
               rel="noopener noreferrer"
             >
