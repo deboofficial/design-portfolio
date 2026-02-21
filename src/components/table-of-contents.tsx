@@ -37,11 +37,11 @@ export function TableOfContents({ headings }: { headings: TOCItem[] }) {
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        className="block text-[12px] leading-[17px] font-[460] tracking-[-0.05px] text-[#b4b4b4] dark:text-[#555] hover:text-[#111111] dark:hover:text-[#e5e5e5] transition-colors duration-200 mb-[40px]"
+        className="block text-[12px] leading-[17px] font-[460] tracking-[-0.05px] text-[#b4b4b4] dark:text-[#555] hover:text-[#111111] dark:hover:text-[#e5e5e5] transition-colors duration-200 mb-[24px]"
       >
         Top
       </a>
-      <ul className="space-y-3">
+      <ul className="space-y-1.5">
         {headings.map(({ text, id }) => (
           <li key={id}>
             <a
