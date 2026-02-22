@@ -33,7 +33,7 @@ export function TableOfContents({ headings }: { headings: TOCItem[] }) {
   if (headings.length === 0) return null;
 
   return (
-    <nav className="hidden xl:block fixed top-24 w-[160px] right-[calc(50%+348px)]">
+    <nav className="hidden xl:block fixed top-24 w-[160px] left-[120px]">
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
