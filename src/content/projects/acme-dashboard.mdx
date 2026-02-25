@@ -3,7 +3,7 @@ title: "Imposter"
 description: "Redesigning the analytics experience for a B2B SaaS platform, improving data comprehension by 40%."
 role: "Lead Product Designer"
 year: "2025"
-date: "12 March, 2024"
+date: "12 March, 2025"
 overview: "Most of my recent work has focused on enterprise financial products, which naturally moved me away from mobile design. I missed the speed and tactility of it, the way small details can completely shape how something feels in your hand."
 summary: "Imposters began as a way to return to that space and rebuild those instincts. It was an opportunity to explore motion, interaction, and visual tone again without enterprise constraints."
 thumbnail: ""
@@ -18,34 +18,51 @@ Imposters is a party game designed for people in the same room. It supports face
 
 Players give clues one by one, discuss suspicions, and vote on who they believe is the imposter. The app manages the structure of the game by handling word assignment, timers, and eliminations. The social dynamic happens between players. The product simply keeps the game organised.
 
-<PlaceholderImage aspect="16/9" caption="Mapping the existing dashboard's information architecture" />
+From a design perspective, this meant designing an experience that was more felt than seen. The interactions needed to be intuitive enough that it faded into the background. Every tap, transition, and visual element had to reinforce that sense of fluidity and playfulness.
+
+
+<PlaceholderImage aspect="16/9" caption="Mapping the architecture in sequences of fluid disclosure" />
 
 ## Interaction approach
 
-I started with a two-week research phase — interviewing 12 power users and shadowing 5 customer success calls. Three patterns emerged:
+Beyond that, I wanted the app to feel playful yet polished, balancing bold and vibrant colours with clean typography. The colour palette shifted from an initial neon scheme to vibrant tones that felt more fun. Shapes were rounded to evoke friendliness, and animations were kept subtle and purposeful. Just enough to create moments of delight without pulling focus.
 
-- Users checked the same 3–4 metrics daily but had to navigate multiple views to find them
-- Custom report creation was powerful but poorly discoverable
-- Alert thresholds were too rigid, generating notification fatigue
-
-<PlaceholderImage aspect="4/3" caption="Research synthesis — identifying patterns across user interviews" />
+<PlaceholderImage aspect="4/3" caption="Vibrance and bounce evoke a feeling of friendliness and play" />
 
 ## Approach
 
-Rather than a complete redesign, I proposed a phased approach: fix the daily workflow first, then expand to custom reporting.
+Players are greeted by a quick setup upon launching the game. A player-count slider adjusts the game size, while the role distribution frame let's players tweak the balance of civilians and imposters. The How to play button links to a tutorial to help newcomers settle right in.
 
-**Phase 1** focused on a personalized home view. Each user could pin their most-used metrics, with intelligent defaults based on role and usage patterns.
+<PlaceholderImage aspect="16/9" caption="Setup flow — player count, role distribution, and onboarding" />
+
+Next, a colourful stack of cards slides in, each representing a player. The players must enter their names or select one from the saved players to reveal their secret words. This repeats until the last player, who then starts the game. The input expands to allow for avatar selection, a requested feature that adds a personal touch.
 
 <PlaceholderImage aspect="16/9" caption="Personalized home view with pinned metrics" />
 
-**Phase 2** introduced a simplified report builder with natural language inputs — "Show me conversion rate by channel, last 30 days" — reducing the steps from 8 to 2.
+The save button allows new players to save their names, so they don’t have to re-enter them in future rounds. This will particularly be useful for frequent players, as it streamlines the setup process and makes it easier to jump back into the game. The save button replaces the "saved players" button after a name is inputted.
 
 <PlaceholderImage aspect="3/2" caption="Natural language report builder — final iteration" />
 
+The game unfolds in the voting and elimination phase. Players vote physically, and the app eliminates the most-voted player. Tapping a player's button triggers a confirmation modal to prevent misclicked eliminations. The rounds continue without eliminated players, until fatigue sets in. Subtle visual cues were added to ensure there's a clear distinction between voting and elimination states.
+
+<PlaceholderImage aspect="4/3" caption="Voting and elimination states with clear visual distinction" />
+
+Beyond gameplay, the app includes accessibility and personalisation functions. Players can tweak various aspects of the experience, including sound, animations, and appearance preferences. Language settings, enable the game to be played in 15 different languages so players worldwide can enjoy the game comfortably in their native tongue.
+
+<PlaceholderImage aspect="16/9" caption="Accessibility and language settings across 15 languages" />
+
+I tested the game in a real setting during a New Year's games night with friends and family. The feedback was overwhelmingly positive, but seeing it played in the wild revealed small areas for improvement. I refined those details, tweaking interactions to make the experience even smoother.
+
+<PlaceholderImage aspect="3/2" caption="Refined interactions after real-world playtesting" />
+
 ## Testing and learnings
 
-- 40% improvement in data comprehension (measured via task completion rates)
-- 3x increase in daily active usage of the dashboard
-- NPS increased from 32 to 58 within the first quarter
+I tested Imposters during a New Year’s games night with friends and family. Watching people use it in a real environment highlighted friction points that were not obvious in isolation. Players rushed through screens, misclicked during voting, and occasionally hesitated when states were unclear. Small refinements to feedback and clarity improved the overall flow.
+
+Returning to mobile design after years in enterprise work was humbling. My first iteration was weak. I had to revisit core mobile principles, including gesture expectations, pacing, and the importance of micro interactions.
+
+## What's next
+
+It’s unlikely that I’ll take this project further, at least in a formal sense. It served its purpose as a way to return to mobile design and rebuild that intuition. If anything, the next step is carrying these learnings into future work, especially where interaction, motion, and haptics play a bigger role.
 
 > "This is the first time the dashboard actually feels like it was designed for me." — VP of Sales, Enterprise customer
